@@ -1,4 +1,4 @@
-import { Route, Navigate, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+import { Route, Navigate, RouterProvider, createRoutesFromElements, createHashRouter } from "react-router-dom";
 import RootLayout from "../RootLayout/RootLayout";
 import { HomePage } from "../../pages/HomePage";
 import { AboutMePage } from "../../pages/AboutMePage";
@@ -7,7 +7,7 @@ import { NotFoundPage } from "../../pages/NotFoundPage";
 import { JobList } from "../JobList";
 import { vacancyLoader } from "../../loaders/vacancyLoader";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
     createRoutesFromElements(
         <Route element={<RootLayout />}>
             <Route path="/" element={<Navigate to="/vacancies/moscow" replace />}/>
