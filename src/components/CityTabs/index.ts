@@ -1,1 +1,1 @@
-export { CityButtons } from "./CityTabs"
+export { CityTabs } from "./CityTabs"
